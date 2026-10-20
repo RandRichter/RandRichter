@@ -37,7 +37,14 @@ I built the Cloudflare backend, account dashboard, and ESP32 firmware. The syste
 - Complete reconnect snapshots, offline count retention, and device credential revocation.
 - Per-device appearance controls, Wi-Fi onboarding, native firmware tests, and disposable backend integration checks.
 
-**Technology:** JavaScript, Cloudflare Workers, D1/SQLite, Durable Objects, WebSockets, C++, ESP32, and FreeRTOS.
+| Component | Languages and platform |
+| --- | --- |
+| **Firmware** | **C++** on ESP32 / Arduino / FreeRTOS |
+| **Backend** | **JavaScript** on Cloudflare Workers and Durable Objects |
+| **Frontend** | **HTML, CSS, JavaScript** |
+| **Database** | **SQL** on D1 / SQLite |
+
+Device communication uses authenticated WebSockets.
 
 [Technical case study](case-studies/subcounter.md) · [SubCounter](https://subcounter.app/) · [Dashboard](https://my.subcounter.app/)
 
