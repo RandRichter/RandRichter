@@ -24,7 +24,7 @@ flowchart LR
 
 **Stack:** JavaScript, Cloudflare Workers, D1/SQLite, Durable Objects, WebSockets, HTML/CSS, C++, ESP32, and FreeRTOS.
 
-Google sign-in identifies the SubCounter account. Access to a creator's channel through YouTube Studio Viewer permissions and the collector session is handled separately. This system is not described as a public YouTube subscriber-count API integration.
+Google sign-in identifies the SubCounter account. The collector uses separately authorized YouTube Studio Viewer access to obtain channel counts, with its own session and reconnection handling.
 
 ## Decisions that matter
 
@@ -56,6 +56,6 @@ Each counter generates its own credential. The backend keeps its hash, and authe
 
 The test tooling exercises account isolation, concurrent pairing, credential revocation, reconnect snapshots, count retention, zero/decreasing values, and per-device settings. Integration checks use disposable workerd/SQLite and the compiled firmware protocol/cache/LED logic with synthetic counts.
 
-The project remains under development. Automatic customer invitation activation, phone captive-portal transitions, and physical update/recovery behavior require further validation. Native tests do not substitute for electrical or radio testing, and this case study makes no fixed end-to-end latency claim.
+The project remains under development. Automatic customer invitation activation, phone captive-portal transitions, and physical update/recovery behavior require further validation. Delivery timing depends on source availability, collection cadence, network conditions, and any active display animation. Electrical and radio behavior require physical testing.
 
 The application and firmware source are maintained in a private repository. This public case study describes the architecture and my contribution without publishing the commercial implementation or account data.
