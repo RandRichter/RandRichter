@@ -21,7 +21,13 @@ I built Display Tips to bring PayPal, Venmo, and Cash App tip alerts into an OBS
 - Built connected-account and inbox workflows, alongside billing and administrative tools.
 - Developed automated tests for account flows, billing, event delivery, and UI behavior.
 
-**Technology:** JavaScript, HTML/CSS, Cloudflare Workers, Python/FastAPI, OAuth integrations, and automated testing.
+| Component | Languages and technology |
+| --- | --- |
+| **Hosted backend** | **JavaScript** — Cloudflare Workers and Durable Objects |
+| **Frontend and OBS overlays** | **HTML, CSS, JavaScript** — browser interfaces and WebSockets |
+| **Hosted database** | **SQL / SQLite** — SQLite-backed Durable Objects |
+| **Local application** | **Python** — FastAPI, Uvicorn, Jinja2, SQLite |
+| **Integrations and testing** | Google OAuth / Gmail, PayPal, Stripe, OBS; Node.js test runner and pytest |
 
 [Visit Display Tips](https://displaytips.com/)
 
