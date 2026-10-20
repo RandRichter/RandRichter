@@ -22,7 +22,15 @@ flowchart LR
     E -->|Pairing and device authentication| W
 ```
 
-**Stack:** JavaScript, Cloudflare Workers, D1/SQLite, Durable Objects, WebSockets, HTML/CSS, C++, ESP32, and FreeRTOS.
+## Languages by component
+
+| Component | Languages | Platform |
+| --- | --- | --- |
+| **Physical display firmware** | **C++** | ESP32, Arduino, FreeRTOS |
+| **Backend and device APIs** | **JavaScript** | Cloudflare Workers, Durable Objects, WebSockets |
+| **Browser dashboard** | **HTML, CSS, JavaScript** | Browser UI served by Cloudflare |
+| **Database** | **SQL** | D1 / SQLite |
+| Development tools | Python, Shell | Build and verification scripts |
 
 Google sign-in identifies the SubCounter account. The collector uses separately authorized YouTube Studio Viewer access to obtain channel counts, with its own session and reconnection handling.
 
