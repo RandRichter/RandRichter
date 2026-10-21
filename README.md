@@ -56,6 +56,17 @@ Device communication uses authenticated WebSockets.
 
 The source is private. Customer invitation activation and physical setup/update validation remain ongoing.
 
+## Cloud deployment experience
+
+| Project | Hosting and services |
+| --- | --- |
+| **Arb Monitor** | **AWS** — Python services, Linux / systemd, PostgreSQL, HTTP and WebSocket integrations |
+| **Display Tips** | **Cloudflare Workers and Durable Objects** — JavaScript services, SQLite-backed persistence and WebSocket alert delivery |
+| **SubCounter** | **Cloudflare Workers, D1 and Durable Objects** — account/device APIs, SQL data, account-scoped WebSocket delivery |
+| **XdFree** | **Cloudflare Pages, Pages Functions and Workers KV** — browser editor hosting, TypeScript billing/entitlement and feedback endpoints |
+
+Arb Monitor matches events across Kalshi and Polymarket and provides monitoring, execution workflows and browser dashboards. Its source remains private.
+
 ## Background
 
 I founded Development Collective and grew it into a five-developer e-commerce agency delivering Shopify Plus websites, custom applications, integrations, and conversion optimization. My work covers discovery, solution architecture, development, client communication, and launch.
